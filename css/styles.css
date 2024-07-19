@@ -500,9 +500,10 @@ section {
   background-color: #fcfcfc;
 }
 .modal-btn {
-  border-radius: 4px;
-  width: 24px;
-  height: 24px;
+  border-radius: 100%;
+  fill: #e7e9fc;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
 
   display: block;
   margin-left: auto;
@@ -527,6 +528,13 @@ section {
   flex-direction: column;
   gap: 8px;
 }
+
+.modal-field {
+  /* margin-bottom: 18px; */
+
+  width: 100%;
+}
+
 .modal-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -535,6 +543,15 @@ section {
   /* display: block; */
   padding-left: 16px;
   padding-right: 16px;
+
+  outline: transparent;
+}
+
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+.modal-input:focus + .modal-icon {
+  fill: #4d5ae5;
 }
 .modal-input::placeholder {
   font-weight: 400;
@@ -542,4 +559,26 @@ section {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-field-wrap {
+  position: relative;
+}
+
+.modal-icon {
+  fill: #2e2f42;
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-comment {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  height: 120px;
+  width: 100%;
+  /* display: block; */
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
 }
